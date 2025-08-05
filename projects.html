@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Projects | BME Roadmap</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .projects-section {
+      padding: 40px 20px;
+    }
+
+    .semester {
+      margin-bottom: 60px;
+    }
+
+    .semester h3 {
+      background: linear-gradient(to right, #0077b6, #00b4d8);
+      color: white;
+      padding: 15px 25px;
+      border-radius: 12px;
+      font-size: 26px;
+      margin-bottom: 25px;
+      text-align: left;
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    }
+
+    .cards-wrapper {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 25px;
+    }
+
+    .project-card {
+      background-color: #ffffff;
+      border: 2px solid #90e0ef;
+      border-radius: 18px;
+      padding: 20px;
+      text-align: center;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.05);
+    }
+
+    .project-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 10px 24px rgba(0, 123, 255, 0.2);
+    }
+
+    .project-card h4 {
+      color: #0077b6;
+      margin-bottom: 15px;
+    }
+
+    .project-card .btn {
+      display: block;
+      margin: 8px auto;
+      padding: 10px 20px;
+      background-color: #023e8a;
+      color: white;
+      border-radius: 25px;
+      font-weight: bold;
+      text-decoration: none;
+      transition: 0.3s ease;
+    }
+
+    .project-card .btn:hover {
+      background-color: #0077b6;
+      transform: scale(1.05);
+    }
+
+    @media (max-width: 768px) {
+      .semester h3 {
+        font-size: 22px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <h1>BME Roadmap</h1>
+    <ul>
+      <li><a href="index.html">About</a></li>
+      <li><a href="notes.html">Notes</a></li>
+      <li><a href="projects.html" class="active">Projects</a></li>
+      <li><a href="quiz.html">Quiz</a></li>
+      <li><a href="certificate.html">Certificate</a></li>
+    </ul>
+  </nav>
+
+  <!-- Hero -->
+  <header class="hero">
+    <h2>Biomedical Engineering Projects</h2>
+    <p>📘 Semester-wise Project Ideas & Lab Manuals to inspire your innovation</p>
+  </header>
+
+  <!-- Project Sections -->
+  <main class="projects-section">
+
+    <!-- Semester 1 -->
+    <section class="semester">
+      <h3>Semester 1</h3>
+      <div class="cards-wrapper">
+        <div class="project-card">
+          <h4>Applied Physics</h4>
+          <a href="projects/sem1/applied_physics_projects.pdf" class="btn" target="_blank">📄 Project Ideas</a>
+          <a href="projects/sem1/applied_physics_lab_manual.pdf" class="btn" target="_blank">📥 Lab Manual</a>
+        </div>
+        <div class="project-card">
+          <h4>Basic Electrical Engineering</h4>
+          <a href="projects/sem1/basic_electrical_projects.pdf" class="btn" target="_blank">📄 Project Ideas</a>
+          <a href="projects/sem1/basic_electrical_lab_manual.pdf" class="btn" target="_blank">📥 Lab Manual</a>
+        </div>
+        <div class="project-card">
+          <h4>Introduction to Computing</h4>
+          <a href="projects/sem1/computing_projects.pdf" class="btn" target="_blank">📄 Project Ideas</a>
+          <a href="projects/sem1/computing_lab_manual.pdf" class="btn" target="_blank">📥 Lab Manual</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Semester 2 -->
+    <section class="semester">
+      <h3>Semester 2</h3>
+      <div class="cards-wrapper">
+        <div class="project-card">
+          <h4>Basic Electronics</h4>
+          <a href="projects/sem2/basic_electronics_projects.pdf" class="btn" target="_blank">📄 Project Ideas</a>
+          <a href="projects/sem2/basic_electronics_lab_manual.pdf" class="btn" target="_blank">📥 Lab Manual</a>
+        </div>
+        <div class="project-card">
+          <h4>OOP</h4>
+          <a href="projects/sem2/oop_projects.pdf" class="btn" target="_blank">📄 Project Ideas</a>
+          <a href="projects/sem2/oop_lab_manual.pdf" class="btn" target="_blank">📥 Lab Manual</a>
+        </div>
+        <div class="project-card">
+          <h4>Biochemistry</h4>
+          <a href="projects/sem2/biochemistry_projects.pdf" class="btn" target="_blank">📄 Project Ideas</a>
+          <a href="projects/sem2/biochemistry_lab_manual.pdf" class="btn" target="_blank">📥 Lab Manual</a>
+        </div>
+        <div class="project-card">
+          <h4>Human Anatomy</h4>
+          <a href="projects/sem2/anatomy_projects.pdf" class="btn" target="_blank">📄 Project Ideas</a>
+          <a href="projects/sem2/anatomy_lab_manual.pdf" class="btn" target="_blank">📥 Lab Manual</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Semester 3 -->
+    <section class="semester">
+      <h3>Semester 3</h3>
+      <div class="cards-wrapper">
+        <div class="project-card">
+          <h4>Physiology I</h4>
+          <a href="projects/sem3/physiology1_projects.pdf" class="btn" target="_blank">📄 Project Ideas</a>
+          <a href="projects/sem3/physiology1_lab_manual.pdf" class="btn" target="_blank">📥 Lab Manual</a>
+        </div>
+        <div class="project-card">
+          <h4>Biomechanics</h4>
+          <a href="projects/sem3/biomechanics_projects.pdf" class="btn" target="_blank">📄 Project Ideas</a>
+          <a href="projects/sem3/biomechanics_lab_manual.pdf" class="btn" target="_blank">📥 Lab Manual</a>
+        </div>
+        <div class="project-card">
+          <h4>CAED</h4>
+          <a href="projects/sem3/caed_projects.pdf" class="btn" target="_blank">📄 Project Ideas</a>
+          <a href="projects/sem3/caed_lab_manual.pdf" class="btn" target="_blank">📥 Lab Manual</a>
+        </div>
+        <div class="project-card">
+          <h4>Circuit Analysis</h4>
+          <a href="projects/sem3/circuit_analysis_projects.pdf" class="btn" target="_blank">📄 Project Ideas</a>
+          <a href="projects/sem3/circuit_analysis_lab_manual.pdf" class="btn" target="_blank">📥 Lab Manual</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Semester 4 -->
+    <section class="semester">
+      <h3>Semester 4</h3>
+      <div class="cards-wrapper">
+        <div class="project-card">
+          <h4>Biomedical Electronics</h4>
+          <a href="projects/sem4/biomedical_electronics_projects.pdf" class="btn" target="_blank">📄 Project Ideas</a>
+          <a href="projects/sem4/biomedical_electronics_lab_manual.pdf" class="btn" target="_blank">📥 Lab Manual</a>
+        </div>
+        <div class="project-card">
+          <h4>Biomedical Statistics</h4>
+          <a href="projects/sem4/statistics_projects.pdf" class="btn" target="_blank">📄 Project Ideas</a>
+          <a href="projects/sem4/statistics_lab_manual.pdf" class="btn" target="_blank">📥 Lab Manual</a>
+        </div>
+        <div class="project-card">
+          <h4>Physiology II</h4>
+          <a href="projects/sem4/physiology2_projects.pdf" class="btn" target="_blank">📄 Project Ideas</a>
+          <a href="projects/sem4/physiology2_lab_manual.pdf" class="btn" target="_blank">📥 Lab Manual</a>
+        </div>
+        <div class="project-card">
+          <h4>Digital Logic Design</h4>
+          <a href="projects/sem4/dld_projects.pdf" class="btn" target="_blank">📄 Project Ideas</a>
+          <a href="projects/sem4/dld_lab_manual.pdf" class="btn" target="_blank">📥 Lab Manual</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 BME Roadmap – Designed with 💙 for Biomedical Engineers</p>
+  </footer>
+
+</body>
+</html>

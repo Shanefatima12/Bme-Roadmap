@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Certificate of Achievement</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to right, #e0f7fa, #ffffff);
+      padding: 40px 20px;
+      text-align: center;
+      color: #023e8a;
+    }
+
+    h1 {
+      color: #0077b6;
+    }
+
+    input {
+      padding: 10px;
+      width: 250px;
+      font-size: 16px;
+      margin-bottom: 20px;
+      border: 2px solid #90e0ef;
+      border-radius: 8px;
+    }
+
+    button {
+      background-color: #0077b6;
+      color: white;
+      border: none;
+      padding: 12px 25px;
+      font-size: 16px;
+      border-radius: 25px;
+      cursor: pointer;
+      margin-top: 10px;
+      transition: 0.3s;
+    }
+
+    button:hover {
+      background-color: #023e8a;
+    }
+
+    #certificate {
+      display: none;
+      margin-top: 40px;
+      padding: 30px;
+      border: 4px double #0077b6;
+      border-radius: 16px;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+      background: #ffffff;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    }
+
+    #certificate h2 {
+      font-size: 28px;
+      margin-bottom: 10px;
+    }
+
+    #certificate p {
+      font-size: 18px;
+      margin-bottom: 20px;
+    }
+
+    @media print {
+      body * {
+        visibility: hidden;
+      }
+      #certificate, #certificate * {
+        visibility: visible;
+      }
+      #certificate {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        margin: 0;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <h1>🎓 Generate Your Certificate</h1>
+  <p>Enter your name below to receive your BME Quiz Certificate:</p>
+
+  <input type="text" id="studentName" placeholder="Enter your full name">
+  <br>
+  <button onclick="generateCertificate()">Generate Certificate</button>
+
+  <div id="certificate">
+    <h2>Certificate of Achievement</h2>
+    <p>This certificate is proudly presented to</p>
+    <h3 id="nameDisplay" style="color: #0077b6; font-size: 24px;"></h3>
+    <p>For successfully completing the Biomedical Engineering Quiz with excellent performance.</p>
+    <p><strong>Date:</strong> <span id="dateDisplay"></span></p>
+    <p><strong>Issued by:</strong> BME Roadmap Team</p>
+    <br>
+    <button onclick="window.print()">🖨️ Print Certificate</button>
+  </div>
+
+  <script>
+    function generateCertificate() {
+      const name = document.getElementById("studentName").value.trim();
+      if (name === "") {
+        alert("Please enter your name!");
+        return;
+      }
+
+      document.getElementById("nameDisplay").textContent = name;
+
+      const today = new Date();
+      const formattedDate = today.toLocaleDateString('en-GB', {
+        day: 'numeric',
+        month: 'short',
+        year: 'numeric'
+      });
+      document.getElementById("dateDisplay").textContent = formattedDate;
+
+      document.getElementById("certificate").style.display = "block";
+    }
+  </script>
+
+</body>
+</html>

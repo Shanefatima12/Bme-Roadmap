@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>BME Quiz</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #e0f7fa;
+      margin: 0;
+      padding: 20px;
+      color: #023e8a;
+    }
+
+    header {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    h1 {
+      color: #0077b6;
+      font-size: 36px;
+    }
+
+    .quiz-container {
+      max-width: 900px;
+      margin: auto;
+      background: #ffffff;
+      border-radius: 16px;
+      padding: 30px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    }
+
+    .quiz-question {
+      margin-bottom: 25px;
+    }
+
+    .quiz-question p {
+      font-weight: bold;
+      font-size: 18px;
+    }
+
+    label {
+      display: block;
+      margin: 5px 0;
+      cursor: pointer;
+      font-size: 16px;
+    }
+
+    button {
+      background-color: #0077b6;
+      color: white;
+      border: none;
+      padding: 12px 25px;
+      font-size: 16px;
+      border-radius: 25px;
+      cursor: pointer;
+      margin-top: 20px;
+      transition: 0.3s;
+    }
+
+    button:hover {
+      background-color: #023e8a;
+    }
+
+    .quiz-result {
+      margin-top: 30px;
+      text-align: center;
+      font-size: 18px;
+    }
+
+    .quiz-result h3 {
+      color: #0077b6;
+      margin-bottom: 10px;
+    }
+
+    footer {
+      text-align: center;
+      margin-top: 50px;
+      color: #666;
+      font-size: 14px;
+    }
+
+    @media (max-width: 600px) {
+      .quiz-container {
+        padding: 20px;
+      }
+
+      h1 {
+        font-size: 28px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>📝 Biomedical Engineering Quiz</h1>
+    <p>Test your knowledge and unlock your certificate!</p>
+  </header>
+
+  <main class="quiz-container">
+    <form id="quizForm">
+      <!-- Questions -->
+      <div class="quiz-question">
+        <p>1. What does ECG stand for?</p>
+        <label><input type="radio" name="q1" value="a"> Electrocardiogram</label>
+        <label><input type="radio" name="q1" value="b"> Electrogastrograph</label>
+        <label><input type="radio" name="q1" value="c"> Electrochemical Gradient</label>
+      </div>
+
+      <div class="quiz-question">
+        <p>2. What sensor is commonly used to detect heart rate?</p>
+        <label><input type="radio" name="q2" value="a"> LDR</label>
+        <label><input type="radio" name="q2" value="b"> Pulse Sensor</label>
+        <label><input type="radio" name="q2" value="c"> Gas Sensor</label>
+      </div>
+
+      <div class="quiz-question">
+        <p>3. What is the unit of resistance?</p>
+        <label><input type="radio" name="q3" value="a"> Ohm</label>
+        <label><input type="radio" name="q3" value="b"> Watt</label>
+        <label><input type="radio" name="q3" value="c"> Volt</label>
+      </div>
+
+      <div class="quiz-question">
+        <p>4. Which organ is responsible for oxygen exchange?</p>
+        <label><input type="radio" name="q4" value="a"> Liver</label>
+        <label><input type="radio" name="q4" value="b"> Kidney</label>
+        <label><input type="radio" name="q4" value="c"> Lungs</label>
+      </div>
+
+      <div class="quiz-question">
+        <p>5. What is the function of an amplifier?</p>
+        <label><input type="radio" name="q5" value="a"> Attenuate signal</label>
+        <label><input type="radio" name="q5" value="b"> Increase signal strength</label>
+        <label><input type="radio" name="q5" value="c"> Store energy</label>
+      </div>
+
+      <div class="quiz-question">
+        <p>6. What does MRI use for imaging?</p>
+        <label><input type="radio" name="q6" value="a"> X-rays</label>
+        <label><input type="radio" name="q6" value="b"> Magnetic fields & radio waves</label>
+        <label><input type="radio" name="q6" value="c"> Ultrasound</label>
+      </div>
+
+      <div class="quiz-question">
+        <p>7. What is a pacemaker used for?</p>
+        <label><input type="radio" name="q7" value="a"> To filter blood</label>
+        <label><input type="radio" name="q7" value="b"> To regulate heartbeats</label>
+        <label><input type="radio" name="q7" value="c"> To support breathing</label>
+      </div>
+
+      <div class="quiz-question">
+        <p>8. What is the basic unit of the nervous system?</p>
+        <label><input type="radio" name="q8" value="a"> Neuron</label>
+        <label><input type="radio" name="q8" value="b"> Alveoli</label>
+        <label><input type="radio" name="q8" value="c"> Cell wall</label>
+      </div>
+
+      <div class="quiz-question">
+        <p>9. Which software is used for circuit simulation?</p>
+        <label><input type="radio" name="q9" value="a"> AutoCAD</label>
+        <label><input type="radio" name="q9" value="b"> Proteus</label>
+        <label><input type="radio" name="q9" value="c"> MS Word</label>
+      </div>
+
+      <div class="quiz-question">
+        <p>10. What part of the cell produces energy?</p>
+        <label><input type="radio" name="q10" value="a"> Nucleus</label>
+        <label><input type="radio" name="q10" value="b"> Mitochondria</label>
+        <label><input type="radio" name="q10" value="c"> Ribosome</label>
+      </div>
+
+      <button type="button" onclick="calculateScore()">Submit Quiz</button>
+    </form>
+
+    <div id="result" class="quiz-result" style="display: none;"></div>
+  </main>
+
+  <footer>
+    <p>Made with 💙 by a Biomedical Engineering Student</p>
+  </footer>
+
+  <script>
+    function calculateScore() {
+      let score = 0;
+      const answers = {
+        q1: 'a', q2: 'b', q3: 'a', q4: 'c', q5: 'b',
+        q6: 'b', q7: 'b', q8: 'a', q9: 'b', q10: 'b'
+      };
+
+      for (let q in answers) {
+        const selected = document.querySelector(`input[name="${q}"]:checked`);
+        if (selected && selected.value === answers[q]) {
+          score++;
+        }
+      }
+
+      const resultDiv = document.getElementById('result');
+      resultDiv.style.display = 'block';
+
+      if (score >= 8) {
+        resultDiv.innerHTML = `
+          <h3>🎉 Excellent! You scored ${score}/10</h3>
+          <p>You've unlocked your certificate!</p>
+          <a href="certificate.html"><button>Get Certificate</button></a>
+        `;
+      } else {
+        resultDiv.innerHTML = `
+          <h3>Good try! You scored ${score}/10</h3>
+          <p>Keep practicing to unlock your certificate at 8/10 💪</p>
+        `;
+      }
+    }
+  </script>
+
+</body>
+</html>

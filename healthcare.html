@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>BME in Healthcare | BME Roadmap</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to right, #e0f7fa, #ffffff);
+      margin: 0;
+      padding: 0;
+      color: #023e8a;
+    }
+
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: #023e8a;
+      padding: 15px 30px;
+      color: white;
+    }
+
+    .navbar h1 {
+      font-size: 24px;
+    }
+
+    .navbar ul {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+      margin: 0;
+      padding: 0;
+    }
+
+    .navbar ul li a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .navbar ul li a:hover,
+    .navbar ul li a.active {
+      border-bottom: 2px solid white;
+    }
+
+    .health-section {
+      max-width: 1000px;
+      margin: 60px auto;
+      background: #ffffff;
+      border-radius: 18px;
+      padding: 50px 30px;
+      box-shadow: 0 10px 25px rgba(0, 119, 182, 0.1);
+      text-align: center;
+      animation: fadeIn 1s ease-in-out;
+    }
+
+    .health-section h2 {
+      font-size: 36px;
+      color: #0077b6;
+      margin-bottom: 20px;
+    }
+
+    .health-section p {
+      font-size: 18px;
+      line-height: 1.8;
+      color: #333;
+      margin-bottom: 15px;
+    }
+
+    .health-section ul {
+      margin-top: 30px;
+      padding-left: 0;
+      list-style: none;
+      text-align: left;
+    }
+
+    .health-section ul li {
+      background-color: #caf0f8;
+      margin-bottom: 12px;
+      padding: 12px 18px;
+      border-radius: 12px;
+      color: #023e8a;
+      font-size: 16px;
+      position: relative;
+    }
+
+    .health-section ul li::before {
+      content: "💡";
+      margin-right: 10px;
+    }
+
+    .highlight {
+      font-weight: bold;
+      color: #0077b6;
+    }
+
+    footer {
+      margin-top: 60px;
+      padding: 20px;
+      background-color: #023e8a;
+      color: white;
+      text-align: center;
+      font-size: 14px;
+    }
+
+    @keyframes fadeIn {
+      0% { opacity: 0; transform: translateY(20px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+
+    @media screen and (max-width: 768px) {
+      .health-section {
+        padding: 30px 20px;
+        margin: 30px 15px;
+      }
+
+      .health-section h2 {
+        font-size: 28px;
+      }
+
+      .health-section p, .health-section li {
+        font-size: 16px;
+      }
+
+      .navbar {
+        flex-direction: column;
+        gap: 10px;
+      }
+
+      .navbar ul {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- 🌐 Navbar -->
+  <nav class="navbar">
+    <h1>BME Roadmap</h1>
+    <ul>
+      <li><a href="index.html">About</a></li>
+      <li><a href="notes.html">Notes</a></li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="quiz.html">Quiz</a></li>
+      <li><a href="certificate.html">Certificate</a></li>
+      <li><a href="healthcare.html" class="active">BME in Healthcare</a></li>
+      <li><a href="thankyou.html">Thank You</a></li>
+    </ul>
+  </nav>
+
+  <!-- 🩺 Healthcare Section -->
+  <section class="health-section">
+    <h2>🌡️ Biomedical Engineering in Healthcare</h2>
+    <p>Biomedical Engineering (BME) is at the heart of modern medicine — where technology meets healing.</p>
+
+    <p>From diagnostic machines to life-saving implants, BME integrates engineering with biology to improve patient care.</p>
+
+    <ul>
+      <li><span class="highlight">Medical Devices:</span> Pacemakers, ventilators, dialysis machines, and infusion pumps.</li>
+      <li><span class="highlight">Imaging Technologies:</span> MRI, CT Scan, Ultrasound, and X-rays for detailed diagnostics.</li>
+      <li><span class="highlight">Prosthetics & Implants:</span> Advanced artificial limbs and joint replacements that restore mobility.</li>
+      <li><span class="highlight">Healthcare IT:</span> AI tools and software systems that support diagnosis and monitoring.</li>
+      <li><span class="highlight">Rehabilitation Engineering:</span> Devices and systems helping patients recover faster and better.</li>
+      <li><span class="highlight">Wearables & Telemedicine:</span> Real-time health tracking and remote consultations made possible.</li>
+    </ul>
+
+    <p>💙 With BME, the future of healthcare is smarter, safer, and more personalized.</p>
+  </section>
+
+  <!-- 👣 Footer -->
+  <footer>
+    <p>Made with 💙 for Biomedical Engineers | BME Roadmap</p>
+  </footer>
+
+</body>
+</html>
