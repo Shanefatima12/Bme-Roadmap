@@ -1,0 +1,205 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&family=Caveat&display=swap');
+
+:root {
+  --primary: #023e8a;
+  --secondary: #0077b6;
+  --accent: #48cae4;
+  --light: #f0f8ff;
+  --white: #ffffff;
+  --glass: rgba(255, 255, 255, 0.5);
+  --dark: #03045e;
+  --font-main: 'Quicksand', sans-serif;
+  --font-hand: 'Caveat', cursive;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: var(--font-main);
+  background: linear-gradient(135deg, #e0f7fa, #ffffff);
+  color: var(--dark);
+  scroll-behavior: smooth;
+}
+
+/* 🌐 Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: var(--primary);
+  padding: 20px 30px;
+  color: var(--white);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.navbar h1 {
+  font-family: var(--font-hand);
+  font-size: 30px;
+  margin: 0;
+}
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+  margin: 0;
+}
+
+.navbar ul li a {
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+  padding-bottom: 4px;
+  transition: 0.3s ease;
+}
+
+.navbar ul li a:hover,
+.navbar ul li a.active {
+  border-bottom: 3px solid var(--accent);
+}
+
+/* 🏠 Hero */
+.hero {
+  text-align: center;
+  padding: 80px 20px;
+  background: linear-gradient(to right, #caf0f8, #ade8f4);
+  border-bottom-left-radius: 60px;
+  border-bottom-right-radius: 60px;
+}
+
+.hero h2 {
+  font-family: var(--font-hand);
+  font-size: 42px;
+  color: var(--primary);
+}
+
+.hero p {
+  max-width: 700px;
+  margin: auto;
+  font-size: 18px;
+  color: #555;
+}
+
+/* 📋 Cards */
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  padding: 60px 20px;
+}
+
+.card {
+  background: var(--white);
+  border-radius: 20px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+  padding: 25px;
+  width: 270px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: center;
+}
+
+.card:hover {
+  transform: translateY(-8px) scale(1.03);
+  box-shadow: 0 12px 25px rgba(0, 123, 255, 0.2);
+}
+
+.card h3 {
+  color: var(--secondary);
+  font-size: 20px;
+  margin-bottom: 15px;
+}
+
+/* 🎀 Buttons */
+button, .btn {
+  background: var(--secondary);
+  color: white;
+  padding: 10px 24px;
+  border: none;
+  border-radius: 25px;
+  font-weight: bold;
+  font-family: var(--font-main);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 15px;
+  box-shadow: 0 4px 10px rgba(0, 119, 182, 0.2);
+}
+
+button:hover, .btn:hover {
+  background: var(--primary);
+  transform: scale(1.05);
+}
+
+/* 📝 Sections */
+section {
+  padding: 40px 20px;
+  max-width: 1000px;
+  margin: auto;
+  text-align: center;
+}
+
+section h3 {
+  font-size: 28px;
+  color: var(--primary);
+  margin-bottom: 15px;
+}
+
+/* 👣 Footer */
+footer {
+  background: var(--primary);
+  color: white;
+  text-align: center;
+  padding: 25px;
+  font-size: 14px;
+  border-top-left-radius: 50px;
+  border-top-right-radius: 50px;
+  margin-top: 50px;
+}
+
+/* 🎓 Certificate Input */
+.cert-container {
+  text-align: center;
+  margin: 60px auto;
+}
+
+.cert-container input {
+  padding: 12px;
+  width: 280px;
+  border-radius: 20px;
+  border: 1px solid var(--accent);
+  font-size: 16px;
+}
+
+/* 📱 Mobile Responsive */
+@media screen and (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  .navbar ul {
+    flex-direction: column;
+    gap: 12px;
+    padding-top: 10px;
+  }
+
+  .hero h2 {
+    font-size: 28px;
+  }
+
+  section h3 {
+    font-size: 24px;
+  }
+
+  .card {
+    width: 90%;
+  }
+
+  .cert-container input {
+    width: 90%;
+  }
+}
